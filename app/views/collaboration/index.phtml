@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>  Colab </h2>
+
+<div class="container">
+
+<?php
+
+?>
+
+<form  action="/colab/save" method="post">
+<br>
+<select name="example" onChange="OnSelect()">
+<?php foreach($field as $sirroco) { ?> 
+  <option value="<?=$sirroco->ip;?>" ><?=$sirroco->ip ."|".  $sirroco->inserted;?></option>
+ <?php } ?>
+ </select>
+<br>
+<br>
+  <textarea name="text" style="width:400px; height:800px;" value="<?= $sirroco->content; ?>">
+  <?=$sirroco->ip;?> <br>
+  <?=$sirroco->content;?> <br>
+  <?=$sirroco->inserted;?> <br>
+
+   </textarea>
+<br>
+   <input type="submit" name="save" value="save">
+</form>
+
+</div>
+
+<script>
+
+function OnSelect(){
+   <?= 'Test' ?>
+}
+
+</script>
+
+    
+  
+</body>
+</html>
